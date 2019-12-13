@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+
+	"TeamCount" "2"
+	maps	"test_grounds"
+	"IsPlayable"	"1"
+	"test_grounds"
+	{
+					"MaxPlayers"                    "10"
+	}
+}

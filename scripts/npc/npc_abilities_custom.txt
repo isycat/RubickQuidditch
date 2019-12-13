@@ -1,0 +1,215 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+
+
+
+
+    "quaffle_carrier"
+    {
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE" 
+        "AbilityTextureName" ""
+
+        "MaxLevel"                      "1"
+    }
+
+
+
+
+    "pick_chaser_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "pick_chaser_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+    "pick_beater_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "pick_beater_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+
+
+
+
+    "rubick_passive_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "rubick_passive_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+    "rubick_beat_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "rubick_beat_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+    "quaffle_passive_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "quaffle_passive_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+    "bludger_passive_lua"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "furion_teleportation"
+        "ScriptFile"                    "bludger_passive_lua"
+
+        "MaxLevel"                      "1"
+
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+        "AbilityCooldown"               "0"
+        "AbilityManaCost"               "0"
+    }
+
+
+
+    "bludger_passive"
+    {
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE" 
+        "AbilityTextureName" ""
+
+        "MaxLevel"                      "1"
+
+
+        "OnUpgrade"
+        {
+            "ApplyModifier"
+            {
+                "ModifierName" "bludgerbuff"
+                "Target" "CASTER"
+            }
+        }
+        "Modifiers"
+        {
+            "bludgerbuff"
+            {
+                "IsDebuff" "0"
+                "IsPurgable" "0"
+                "Passive" "1"
+                "States"
+                {
+                    "MODIFIER_STATE_NO_HEALTH_BAR"                  "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"              "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_UNSELECTABLE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP"                 "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"     "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_FLYING"                         "MODIFIER_STATE_VALUE_ENABLED"
+                }
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_LIMIT"  "700"
+                    "MODIFIER_PROPERTY_MOVESPEED_MAX"  "700"
+                    "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"  "700"
+                }
+                
+                "OnCreated"
+                {
+                    //"AttachEffect"
+                    //{
+                    //    "Target" "CASTER"
+                    //    "EffectName" "particles/units/heroes/hero_earth_spirit/espirit_rollingboulder.vpcf"
+                    //    "EffectAttachType" "follow_origin"
+                    //    "EffectLifeDurationScale" "1"
+                    //    "EffectColorA" "255 255 0"
+                    //}
+                }
+            }
+        }
+    }
+
+
+
+
+    "midwatcher_buff"
+    {
+        "BaseClass" "ability_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE" 
+        "AbilityTextureName" ""
+
+        "MaxLevel"                      "1"
+
+
+        "OnUpgrade"
+        {
+            "ApplyModifier"
+            {
+                "ModifierName" "midwatcherbuff"
+                "Target" "CASTER"
+            }
+        }
+        "Modifiers"
+        {
+            "midwatcherbuff"
+            {
+                "IsDebuff" "0"
+                "IsPurgable" "0"
+                "Passive" "1"
+                "States"
+                {
+                    "MODIFIER_STATE_INVULNERABLE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_MAGIC_IMMUNE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_HEALTH_BAR"                  "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"              "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_UNSELECTABLE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_INVISIBLE"                      "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP"                 "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"     "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_FLYING"                         "MODIFIER_STATE_VALUE_ENABLED"
+                }
+            }
+        }
+    }
+
+
+}

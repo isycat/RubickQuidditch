@@ -1,0 +1,154 @@
+// Units File
+"DOTAUnits"
+{
+
+
+	"npc_rubiq_midwatcher"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/development/invisiblebox.mdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"3.5"
+		"IsSummoned"				"1"
+		"UnitLabel"					"midwatcher"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"midwatcher_buff"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+		
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"			// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"3000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"3000"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_WEAK"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}
+
+
+
+
+
+
+
+
+
+
+	"npc_rubiq_quaffle"
+	{
+	    "Model" "models/heroes/oracle/crystal_ball.vmdl"
+		"SoundSet"					""													// Name of sound set.
+		"IdleSoundLoop"				""
+
+		"ParticleFile"				""
+		"GameSoundsFile"			""
+		"VoiceFile"					""
+
+		"ModelScale" 				"1.0"
+
+		"StatusHealth"				"1000"		// Base health.
+
+	    "BaseClass" "npc_dota_creep"
+	    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+
+		"Ability1"					"bludger_passive"
+		"Ability2"					"quaffle_passive_lua"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		"ArmorPhysical"					"0"
+		"MagicalResistance"				"0"
+
+		"AttackCapabilities"			"DOTA_UNIT_CAP_NO_ATTACK"
+
+		"MovementCapabilities"			"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"					"500"
+		"MovementTurnRate"				"0.9"
+
+		"VisionDaytimeRange"		"1000"
+		"VisionNighttimeRange"		"1000"
+	}
+
+	"npc_rubiq_bludger"
+	{
+	    "Model" "models/particle/snowball.vmdl"
+		"SoundSet"					""													// Name of sound set.
+		"IdleSoundLoop"				""
+
+		"ParticleFile"				""
+		"GameSoundsFile"			""
+		"VoiceFile"					""
+
+		"ModelScale" 				"0.3"
+
+		"StatusHealth"				"1000"		// Base health.
+
+	    "BaseClass" "npc_dota_creep"
+	    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+
+		"Ability1"					"bludger_passive"
+		"Ability2"					"bludger_passive_lua"
+
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		"StatusMana"				"0"
+		"StatusManaRegen"			"0"
+		
+		"ArmorPhysical"					"0"
+		"MagicalResistance"				"0"
+
+		"AttackCapabilities"			"DOTA_UNIT_CAP_NO_ATTACK"
+
+		"MovementCapabilities"			"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"					"500"
+		"MovementTurnRate"				"0.9"
+
+		"VisionDaytimeRange"		"1000"
+		"VisionNighttimeRange"		"1000"
+	}
+
+
+
+}

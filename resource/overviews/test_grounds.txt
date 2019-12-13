@@ -1,0 +1,8 @@
+test_grounds
+{
+	material materials/overviews/test_grounds.vmat
+	pos_x -7000
+	pos_y 7000
+	scale 13.672
+}
+

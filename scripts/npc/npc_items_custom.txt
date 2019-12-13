@@ -1,0 +1,61 @@
+"DOTAAbilities"
+{
+
+    "item_apply_modifiers"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "1224"  // unique ID number for this item.  Do not change this once 
+        "BaseClass"                     "item_datadriven"
+        "ItemBaseLevel"                 "1"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "9999"
+        "AbilityCastPoint"                      "0.0"    
+
+        "Modifiers"
+        {
+            "holding_spirit"
+            {
+                "Duration" "90"
+                "IsDebuff" "0"
+                "IsPurgable" "0"
+                "IsHidden" "0"
+                "ThinkInterval" "1.5"
+                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+                "OnCreated"
+                {
+                    //"AttachEffect"
+                    //{
+                    //    "Target" "CASTER"
+                    //    "EffectName" "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal_wispa.vpcf"
+                    //    "EffectAttachType" "follow_overhead"
+                    //    "EffectLifeDurationScale" "1"
+                    //    "EffectColorA" "255 255 0"
+                    //}
+                }
+
+                "OnIntervalThink"
+                {
+                    //"RunScript"
+                    //{
+                    //    "ScriptFile"        "scripts/vscripts/custom_abilities.lua"
+                    //    "Function"          "spiritthink"
+                    //    "Buff"              "holding_spirit"
+                    //}
+                }
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "0"
+                }
+            }
+        }
+
+    }
+
+
+
+}
